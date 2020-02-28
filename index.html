@@ -1,33 +1,105 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html>
-    <head>
-<!--         <meta charset="utf-8" author="James E. Halladay">
-        <link rel="stylesheet" href="test.css" />
-        <script src="test.js" defer> </script>
-        <title>Testing the JavaScript Browser API</title> -->
-    </head>
-
-    <body>
-        
-        <header>
-
-
-        </header>
-
-        <main>
-
-            <input type="file" id="file1" hidden="hidden"/>
-            <button type="button" id="button1">choose a file</button>
-            <span id="text1">no file yet</span>
-
-        </main>
-
-
-        <footer >
-            Copyright &copy; 2020 James E. Halladay
-        </footer>
-
-    </body>
-
-</html>
+<div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>About Me</h2>
+            <h5>
+                <a
+                    href="https://www.coloradomesa.edu/directory/computer-science-mathematics-statistics/ram-basnet.html"
+                    target="_blank"
+                    >CMU Profile</a
+                >
+            </h5>
+            <h5>
+                <a
+                    href="https://www.linkedin.com/in/rambasnet/"
+                    target="_blank"
+                >
+                    LinkedIn Profile</a
+                >
+            </h5>
+            <h5>
+                <a href="https://github.com/rambasnet" target="_blank">
+                    GitHub Projects</a
+                >
+            </h5>
+            <div id="profileImg">
+                <img src="assets/profile.png" style="width:100%" />
+            </div>
+            <p>
+                I am a faculty of Computer Science at
+                <a href="http://www.coloradomesa.edu" target="_blank"
+                    >Colorado Mesa University (CMU)</a
+                >.
+            </p>
+            <p>
+                I'm a Certified Ethical Hacker (CEH) and have been practicing
+                ethical hacking since I was a graduate student at New Mexico
+                Tech (NMT).
+            </p>
+            <p>
+                I discovered and responsibly disclosed several critical security
+                flaws in a web application used by a major health insurance
+                provider in Colorado and "hopefully" helped protecting
+                electronic personal health(EPH) information of tens of thousands of
+                Coloradoans.
+            </p>
+            <hr class="d-sm-none" />
+        </div>
+        <div class="col-sm-8">
+            <h2>CURRENT SCHEDULE</h2>
+            <h5>
+                <a href="teaching.html">This Semester Schedule</a>
+            </h5>
+            <br />
+            <h2>BRIEF BACKGROUND</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for exp in site.data.background %}
+                    <tr>
+                        <td>{{ exp.date }}</td>
+                        <td>
+                            {{ exp.title }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br />
+            <h2>LEISURE</h2>
+            <div><img src="assets/honda.jpg" width="100%" /></div>
+            <p>
+                I enjoy riding my Honda Phantom when I can. I've travelled to almost all of
+                the very beautiful Western Colorado towns on my motorcycle, and looking forward to ride to many more!
+            </p>
+            <p>I follow the mantra "work hard, play hard!"</p>
+            <br />
+            <h5>Everest Base Camp, Nepal, Spring 2018</h5>
+            <div><img src="assets/EBC.JPG" width="100%" /></div>
+            <p>
+                I love outdoor activities. One of my goals is to hike as many
+                14ers as possible in Colorado!
+            </p>
+            <p>
+                I did an epic trek to the Everest Base Camp and Chhola and Renjo
+                Passes of Khumbu region of Nepal along with 3 friends in the
+                Spring 2018. One of my bucket list of things to do!
+            </p>
+            <p>
+                I play soccer in
+                <a href="http://gvas.leaguetoolbox.com/site"
+                    >Grand Valley Adult Soccer league</a
+                >.
+            </p>
+        </div>
+    </div>
+</div>
